@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+		body {
+			background-color: #71d8a4;
+		}
+	</style>
+</head>
+<body>
+    <header class="header"></header>
+    <h1> Subjects</h1>
+
+
+<div class="my-3">
+    <a class="link-opacity-100-hover" href="/subjects/create">Add a new subject</a>
+</div>
+
+{{#each subjects}}
+
+
+<div class="d-flex justify-content-between">
+<a href="/subjects/{{_id}}">
+    {{name}}
+</a>
+
+<div class="d-grid gap-3 d-md-flex justify-content-md-end">
+<a class="link-opacity-100-hover"  href="/subjects/{{_id}}/edit">
+
+Edit
+
+ </a>
+     
+  <form  method="POST" action="/subjects/{{_id}}?_method=DELETE">
+  <button type="submit" style="background-color: #71d8a4; color: black " class="btn btn-dark;">Delete</button>
+</form>
+    
+</div>
+    
+</div>
+
+{{/each}}
+</body>
+</html>
