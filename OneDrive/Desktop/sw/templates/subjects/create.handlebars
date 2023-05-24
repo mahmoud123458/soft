@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Create a new subject </title>
+    <style>
+      body { background-color: #aed36c; }
+    </style>
+  </head>
+  <body>
+    <header class="header"></header>
+    <h1 style="font-family:'Times New Roman'; text-align: center;padding-top: 15px;">Create a new subjects</h1>
+
+    <form action="/subjects" method="post" style="width: 60%;margin:1% 20% 0% 20% ;font-family:'Times New Roman';">
+      {{!Name}}
+      <div class="my-3">
+        <label for="" style=" color: black;padding-left: 15px; " class="my-2">Name</label>
+        <input
+          type="text "
+          class="form-control"
+          name="name"
+          placeholder="Enter Name Of Subject"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+
+      {{!Code}}
+      <div class="my-3">
+        <label for="" style=" color: black;padding-left: 15px;" class="my-2">Code</label>
+        <input
+          type="text "
+          class="form-control"
+          name="code"
+          placeholder="Enter Code Of Subject"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+
+      {{!Name Pre_request}}
+      <div class="my-3">
+        <label for="" style=" color: black;padding-left: 15px; " class="my-2">Name Pre_request</label>
+        <input
+          type="text "
+          class="form-control"
+          name="preRequest"
+          placeholder="Enter Name Of Pre_request Subject"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+      
+      
+      {{!Department}}
+      <div class="my-3">
+        <label for="" style=" color: black;padding-left: 15px;" class="my-2">Department</label>
+        <select
+          name="department"
+          id=""
+          class="form-select"
+          aria-label="Default select example"
+        >
+          {{!-- <option selected >Computer Science</option>
+          <option >Information Systems</option>
+          <option >Information Technology</option> --}}
+
+          {{#each departments}}
+
+            <option value="{{_id}}">{{ name }}</option>
+          {{/each}}
+
+        </select>
+      </div>
+
+      <div class="mt-3">
+
+        <button
+          class="btn btn-outline-success"
+          data-bs-toggle="tooltip"
+          data-bs-html="true"
+          type="submit"
+          style="background-color: #295d09; color: #e9ebed;cursor: pointer; padding: 15px; width: 16%;border: radius 4px;margin:3% 42% 0% 42%;font-size: 27px;"
+        >Save</button>
+      </div>
+    </form>
+  </body>
+</html>

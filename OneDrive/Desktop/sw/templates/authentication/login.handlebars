@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {background-color: #ccc;  }
+    </style>
+    <title> Login </title>
+  </head>
+  <body>
+    <h1
+      style="font-size:24; text-align: center; font-weight:bold; padding: 10px 0px 20px 0px ;font-family:'Times New Roman'; "
+    >Login Page</h1>
+    <form action="/login" method="post" style="width: 50%;margin:5% 25% 0% 25% ;font-family:'Times New Roman';">
+      <div class="my-3">
+        <label for="" style=" color: black;padding-left: 20px;font-size: 22px;">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          placeholder="Enter your Email"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+
+      <div class="my-3">
+        <label for="" style=" color: black;padding-left: 20px;font-size: 22px;">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          placeholder="Enter your Password"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input class="form-check-input" type="radio" name="character" id="student" value="Student" style="margin-left: 20px;">
+        <label class="form-check-label" for="student" style="margin-left: 5px;"> Student   </label>
+
+        <input class="form-check-input" type="radio" name="character" id="doctor" value="Doctor" style="margin-left: 50px;">
+        <label class="form-check-label" for="doctor" style="margin-left: 5px;"> Doctor </label>
+
+        <input class="form-check-input" type="radio" name="character" id="administrator" value="Administrator" checked style="margin-left: 50px;">
+        <label class="form-check-label" for="administrator" style="margin-left: 5px;"> Administrator </label>
+      </div>
+    
+      <div class="my-3">
+        <button
+          type="submit"
+          style="background-color: #17181c; color: #fa4753; cursor: pointer; padding: 12px; border: radius 4px;width: 20%;margin:5% 40% 0% 40%;font-size: 22px;font-weight: bold;"
+          class="btn btn-dark"
+        >
+          Login
+        </button>
+      </div>
+
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body { background-color: #b2a4a4;font-family:'Times New Roman'; }
+    </style>
+  </head>
+  <body>
+    <header class="header"></header>
+    <h1 style="padding: 20px;"> Subjects &#128218</h1>
+
+    <div class="my-3">
+      <button
+        class="btn btn-outline-secondary"
+        style="border: 4px outset #442292;border-radius: 10px;margin:0 0 10px 20px;font-size: 30px;padding: -2px;"
+      >
+        <a class="link-opacity-100-hover" href="/subjects/create" style="color: #fff;">Add a new  subject &#128072</a></button>
+    </div>
+
+
+    {{#each subjects}}
+
+      <div class="d-flex justify-content-between ">
+      
+        <a href="/subjects/{{_id}}" target="_self" style="font-size:30px; margin: 4px; text-decoration: none;">
+         &#128073 {{name}}
+        </a>
+
+        <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-outline-info" style="margin:4px; border:2px ridge; width:90px;">
+            <a class="link-opacity-100-hover" href="/subjects/{{_id}}/edit" style="font-size:22px; margin:2px; text-decoration:none; letter-spacing:2px; font-weight:bold;">
+              Edit
+            </a>
+          </button>
+          <form method="POST" action="/subjects/{{_id}}?_method=DELETE">
+            <button
+              type="submit"
+              style="font-size:22px; margin: 4px;margin: 4px;border: 2px ridge; letter-spacing:.9px; font-weight:bold; "
+              class="btn btn-outline-danger"
+            >Delete</button>
+          </form>
+
+        </div>
+
+      </div>
+
+    {{/each}}
+  </body>
+</html>

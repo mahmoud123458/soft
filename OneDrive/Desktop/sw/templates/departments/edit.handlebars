@@ -1,0 +1,52 @@
+<body style="background-color: #87e1c7; ">
+
+    <h1 style="font-family:'Times New Roman';padding: 15px 0 0 30px;">Edit: 
+        {{ department.name}}</h1>
+
+
+<form action="/departments/{{department._id}}?_method=PUT"
+ method="post"
+  style="font-family:'Times New Roman';width: 80%;margin:2% 10% 0% 10% ;">
+    {{!--Name--}}
+    <div>
+        <label for="" style="padding-left: 15px;">Name</label>
+        <input type="text " class="form-control" name="name" value="{{department.name}}">
+    </div>
+
+
+    {{!--Code--}}
+    <div>
+        <label for="" style="padding-left: 15px;margin-top: 9px;">Code</label>
+        <input type="text " class="form-control" name="code" value="{{department.code}}">
+    </div>
+
+
+
+    {{!--Department--}}
+    {{!-- <div>
+        <label for="" style="padding-left: 15px;margin-top: 9px;">Department</label>
+        <select name="department" id="" class="form-select">
+            <option value="{{_id}}">Computer Science</option>
+             <option value="{{_id}}">Information Systems</option>
+              <option value="{{_id}}">Information Technology</option>
+
+
+
+            {{#each department}}
+
+            <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+            
+        </select>
+    </div>
+    --}}
+   
+    <div class="mt-3">
+
+        <button class="btn btn-success" type="submit" style="cursor: pointer; width: 12%; border:4px ridge; border-radius:10px; margin:3% 44% 0% 44%;font-size: 24px;"
+        >Save</button>
+    </div>
+</form>
+
+
+</body>
